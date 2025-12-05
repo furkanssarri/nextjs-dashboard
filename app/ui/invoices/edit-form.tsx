@@ -24,7 +24,7 @@ export default function EditInvoiceForm({
   const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
 
   return (
-    <form action={formAction}>
+    <form action={formAction as unknown as (formData: FormData) => void}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
